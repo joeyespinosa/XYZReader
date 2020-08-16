@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/article_list_dest">
+
+    <fragment
+        android:id="@+id/article_list_dest"
+        android:name="com.axelia.xyzreader.ui.articlelist.ArticleListFragment"
+        android:label="fragment_article_list"
+        tools:layout="@layout/fragment_article_list">
+        <action
+            android:id="@+id/action_article_list_dest_to_articles_pager_dest"
+            app:destination="@id/articles_pager_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articles_pager_dest"
+        android:name="com.axelia.xyzreader.ui.details.ArticlesPagerFragment"
+        android:label="fragment_articles_pager"
+        tools:layout="@layout/fragment_articles_pager" />
+
+</navigation>
